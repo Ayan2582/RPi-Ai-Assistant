@@ -1,0 +1,3 @@
+requests>=2.31
+pygame>=2.5
+piper-tts==1.2.0

@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local configuration
+config.env
+
+# Piper voice models (downloaded by scripts/install.sh)
+models/*.onnx
+models/*.onnx.json
+
+# Audio artefacts
+*.wav
+
+# OS clutter
+.DS_Store

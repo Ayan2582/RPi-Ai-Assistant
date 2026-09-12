@@ -1,0 +1,16 @@
+# faster-whisper speech-to-text server for Alan.
+# Ollama and Piper run natively on the Pi; only Whisper runs in Docker.
+# Usage: docker compose --env-file config.env up -d whisper
+
+services:
+  whisper:
+    image: ${WHISPER_IMAGE:-fedirz/faster-whisper-server:latest-cpu}
+    container_name: alan-whisper
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    volumes:
+      - hf-cache:/root/.cache/huggingface
+
+volumes:
+  hf-cache:
